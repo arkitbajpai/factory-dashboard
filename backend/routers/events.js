@@ -23,7 +23,7 @@ function validateEvent(ev) {
 
 async function ingestOne(ev) {
   const worker = await Worker.findOne({ worker_id: ev.worker_id });
-  if (!worker) return { status: "error", detail: `Worker ${ev.worker_id} not found` };
+  if (!worker) return { status: "erro sorry ", detail: `Worker ${ev.worker_id} not found` };
 
   const station = await Workstation.findOne({ station_id: ev.workstation_id });
   if (!station) return { status: "error", detail: `Workstation ${ev.workstation_id} not found` };
